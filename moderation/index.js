@@ -24,7 +24,6 @@ app.post('/events', async (req, res) => {
         });
 
     }
-    console.log(posts);
     res.send({});
 });
 

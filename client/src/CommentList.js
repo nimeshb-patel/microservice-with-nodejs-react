@@ -6,13 +6,13 @@ export default ({ comments }) => {
 
     const renderedComments = comments.map(comment => {
         let content;
-        if (comment.status == 'approved') {
+        if (comment.status === 'approved') {
             content = comment.content;
         }
-        if (comment.status == 'rejected') {
+        if (comment.status === 'rejected') {
             content = 'This comment is rejected';
         }
-        if (comment.status == 'pending') {
+        if (comment.status === 'pending') {
             content = 'This comment is awaiting moderation';
         }
         return <li key={comment.id}>{content}</li>
